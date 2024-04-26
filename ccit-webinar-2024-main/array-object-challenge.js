@@ -7,7 +7,7 @@ const quiz = [
                 "options": [
                     "New York Bulls",
                     "Los Angeles Kings",
-                    "Golden State Warriros",
+                    "Golden State Warriors",
                     "Huston Rocket"
                 ],
                 "answer": "Huston Rocket"
@@ -39,22 +39,19 @@ const quiz = [
             }
         ]
     }
+];
 
-]
+// Function to display quiz details
+function displayQuizDetails() {
+    quiz.forEach(subject => {
+        console.log(`Subject: ${subject.subject}`);
+        subject.quiz.forEach((question, index) => {
+            console.log(`Question ${index + 1}: ${question.question}`);
+            console.log(`Answer: ${question.answer}`);
+            console.log("-----------------------");
+        });
+    });
+}
 
-/* 
-    Challenge: 30 mins
-    Display all the subject, question and corresponding answers with the following format
-    e.g.
-    Subject:  Sport
-    Question 1:  Which one is correct team name in NBA?
-    Answer:  Huston Rocket
-    -----------------------
-    Subject:  Math
-    Question 1:  5 + 7 = ?
-    Answer:  12
-    Question 2:  12 - 8 = ?
-    Answer:  4
-*/
-
-// Write your answer here
+// Call the function to display quiz details
+displayQuizDetails();
